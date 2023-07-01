@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>PassMate</title>
+</head>
+<style>
+    body {
+        background-color: white;
+        color: black;
+    }
+
+    #buttons {
+        text-align: center;
+        margin-top: 5rem;
+    }
+
+    button {
+        background-color: white;
+        text-align: center;
+        border-radius: 50px;
+        width: 50%;
+        height: auto;
+        font-size: 3rem;
+        font-family: Agency FB;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        box-shadow: 0 8px 16px 0 grey, 0 6px 20px 0 grey;
+        margin-bottom: 3rem;
+    }
+
+    #title {
+        text-align: center;
+        font-family: Agency FB;
+        font-size: 10rem;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    #info {
+        margin-top: 1rem;
+        font-size: 2rem;
+        font-family: Agency FB;
+        max-width: 80%;
+        margin-left: 9rem;
+    }
+</style>
+
+<body>
+    <p id="title">Pass<span style="color:blue">Mate</span></p>
+    <div id="info">
+        <p>Strength Calaculator helps you calculate the strength of your already existing passwords.
+            Generator helps you to
+            generate strong and secure passwords. Container helps you store your passwords incase you forget them.</p>
+    </div>
+    <div id="buttons">
+        <div>
+            <form action="/strengthcalculator" method="post">
+                <button id="scli" type="Submit">Strength <span style="color:blue">Calculator</span></button>
+            </form>
+        </div>
+        <div>
+            <form action="/passwordgenerator" method="post">
+                <button id="gen" type="Submit">Password <span style="color:blue">Generator</span></button>
+            </form>
+        </div>
+        <div>
+            <form action="" method="post">
+                <button id="storage" type="Submit">Password <span style="color:blue">Container</span></button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

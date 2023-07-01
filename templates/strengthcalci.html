@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Strength Calculator</title>
+</head>
+<style>
+    body {
+        background-color:white;
+    }
+
+    #entrylabel {
+        font-family: Agency FB;
+        font-size: 4rem;
+        margin-left: 2rem;
+        color: black;
+        background-color: white;
+        border-radius: 20px;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    #newbox {
+        margin-top: 15rem;
+        text-align: center;
+    }
+
+    input {
+        width: 80%;
+        height: 7rem;
+        border-radius: 20px;
+        border-width: 5px;
+        border-color: black;
+
+    }
+
+    input[type="text"] {
+        font-size: 2rem;
+    }
+
+    #submit {
+        color: white;
+        background-color: blue;
+        border-color: black;
+        font-size: 3rem;
+        font-family: Agency FB;
+        padding-top: 1rem;
+        padding-bottom: 2rem;
+        height: 6rem;
+        width: 50%;
+        border-radius: 50px;
+    }
+    #epass{
+        margin-top: 2rem;
+    }
+</style>
+
+<body>
+    <form action="/passwordscore" method="post">
+        <div id="newbox">
+            <label id="entrylabel">Enter any <span style="color:blue">password</span> to check its strength:  </label>
+            <br>
+            <br>
+            <div id="epass">
+                <input type="text" name="password" placeholder="Enter password here">
+            </div>
+            <br>
+            <br>
+            <div id="sub">
+                <input id="submit" type="Submit" name="Submit">
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>
