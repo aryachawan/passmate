@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Strength Calculator</title>
+</head>
+<style>
+    body {
+        background-image: url("/static/back1.jpg");
+        background-color: white;
+        font-family: sans-serif;
+    }
+
+    #entrylabel {
+        text-align: center;
+        font-size: 3rem;
+        color: black;
+        background: white;
+        border-radius: 20px;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    #newbox {
+        margin-top: 13rem;
+        text-align: center;
+    }
+
+    input {
+        width: 80%;
+        height: 7rem;
+        border-radius: 20px;
+        border-width: 5px;
+        border-color: black;
+
+    }
+
+    input[type="text"] {
+        font-size: 2rem;
+    }
+
+    #submit {
+        color: white;
+        background-color: blue;
+        border-color: black;
+        font-size: 3rem;
+        padding-top: 1rem;
+        padding-bottom: 2rem;
+        height: 6rem;
+        width: 50%;
+        border-radius: 30px;
+        box-shadow: 0 8px 16px 0 grey, 0 6px 20px 0 darkgrey;
+    }
+
+    #epass {
+        margin-top: 2rem;
+    }
+
+    #sclinfo {
+        margin-top: 6rem;
+        text-align: center;
+    }
+
+    p {
+        background-color: white;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        font-family: sans-serif;
+        font-size: 1.5rem;
+        border-radius: 30px;
+        text-align: justify;
+    }
+</style>
+
+<body>
+    <div>
+        <form action="/passwordscore" method="post">
+            <div id="newbox">
+                <label id="entrylabel">Enter any <span style="color:blue">password</span>:
+                </label>
+                <br>
+                <br>
+                <div id="epass">
+                    <input type="text" name="password" placeholder="Enter password here">
+                </div>
+                <br>
+                <br>
+                <div id="sub">
+                    <input id="submit" type="Submit" name="Submit">
+                </div>
+            </div>
+        </form>
+    </div>
+    <div id="sclinfo">
+        <p>The Strength Calculator computes the strength of your password and gives a percentage-based rating.
+            The calculation takes by place taking into account a number of factors such as
+            length, complexity, and character variety. The calculator evaluates these components and gives a
+            rating or score that quantifies the strength of the password. This enables users to create or modify
+            passwords with more knowledge, making them less vulnerable to hacker efforts.</p>
+    </div>
+</body>
+
+</html>

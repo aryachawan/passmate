@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<htmL>
+
+<head>
+    <title>Extracted</title>
+</head>
+<style>
+    #infobox{
+        text-align: center;
+        margin-top: 15rem;
+    }
+    #entrylabel {
+        font-family: sans-serif;
+        font-size: 4.5rem;
+        margin-bottom: 2rem;
+    }
+    input{
+        font-size: 3rem;
+        font-family: sans-serif;
+        border-color: black;
+        border-width: 5px;
+        border-radius: 20px;
+        width: 70%;
+        height: 5rem;
+        margin-bottom: 2rem;
+    }
+    button {
+        text-align: center;
+        font-family: sans-serif;
+        font-size: 1rem;
+        background-color: blue;
+        color: white;
+        padding-left: 3rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        padding-right: 3rem;
+        border-radius: 30px;
+        box-shadow: 0 8px 16px 0 grey, 0 6px 20px 0 grey;
+    }
+</style>
+
+<body>
+    <div id="infobox">
+        <p id="entrylabel">Extracted <span style="color:blue">Password:</span></p><br>
+            <input id="expass" type="text" value="{{la}}"><br>
+            <button onclick="myFunction()">Copy To Clipboard</button>
+    </div>
+</body>
+<script>
+    function myFunction() {
+        var copyText = document.getElementById("expass");
+
+        copyText.select();
+        copyText.setSelectionRange(0, 99999);
+
+        navigator.clipboard.writeText(copyText.value);
+
+        alert("Copied the text: " + copyText.value);
+    }
+</script>
+
+</htmL>
