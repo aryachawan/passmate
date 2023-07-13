@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Extract Passwords</title>
+</head>
+<style>
+    body {
+        background-image: url("/static/back1.jpg");
+    }
+
+    input[type="text"] {
+        font-size: 2rem;
+    }
+
+    label {
+        background-color: white;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        border-radius: 20px;
+        font-size: 4rem;
+        font-family: sans-serif;
+    }
+    #infobox{
+        text-align: center;
+        margin-top: 13rem;
+    }
+    #entrylabel{
+        margin-bottom: 3rem;
+    }
+    input{
+        border-width: 5px;
+        border-radius: 20px;
+        height: 6rem;
+        width: 70%;
+        margin-bottom: 1.5rem;
+    }
+    button {
+        background-color: blue;
+        margin: 1rem;
+        text-align: center;
+        width: 45%;
+        height: 5rem;
+        padding-top: 1rem;
+        padding-bottom: 4rem;
+        border-radius: 20px;
+        font-family: sans-serif;
+        font-size: 3rem;
+        color: white;
+        border-width: 5px;
+        box-shadow: 0 8px 16px 0 grey, 0 6px 20px 0 grey;
+    }
+    button:hover{
+        animation: sub 0.5s ease-in both
+    }
+    @keyframes sub{
+        50%{
+            width:50%;
+        }
+    }
+</style>
+
+<body>
+    <div id="infobox">
+        <form action="/extracted" method="post">
+            <div id="entrylabel">
+            <label>Enter keyword <span style="color:blue">identifier:</span></label>
+            </div>
+            <input type="text" name="key" placeholder="Enter keyword here">
+            <button type="Submit">Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>

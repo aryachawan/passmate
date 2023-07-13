@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>PassMate</title>
+</head>
+<style>
+    body {
+        background-color: white;
+        font-family: sans-serif;
+    }
+
+    #buttons {
+        text-align: center;
+        margin-top: 5rem;
+    }
+
+    button {
+        background-color: white;
+        text-align: center;
+        border-radius: 50px;
+        width: 50%;
+        height: 6.5rem;
+        font-size: 3rem;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+        box-shadow: 0 8px 16px 0 grey, 0 6px 20px 0 grey;
+        margin-bottom: 3rem;
+    }
+
+    .title {
+        text-align: center;
+        font-size: 11rem;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    #info{
+        text-align: center;
+        font-size: 2rem;
+        margin-top: 1rem;
+    }
+    .scli:hover{
+        animation: alpha 0.5s ease-in both;
+    }
+    .gen:hover{
+        animation: alpha 0.5s ease-in both;
+    }
+    .storage:hover{
+        animation: alpha 0.5s ease-in both;
+    }
+    @keyframes alpha{
+        50%{
+            height:7rem;
+            width:55%
+        }
+    }
+</style>
+
+<body>
+    <p class="title">Pass<span style="color:blue">Mate</span></p>
+    <div>
+        <p id="info">Strength Calaculator helps you calculate the strength of your already existing passwords.
+            Generator helps you to
+            generate strong and secure passwords. Container helps you store your passwords incase you forget them.</p>
+    </div>
+    <div id="buttons">
+        <div>
+            <form action="/strengthcalculator" method="post">
+                <button class="scli" type="Submit">Strength <span style="color:blue">Calculator</span></button>
+            </form>
+        </div>
+        <div>
+            <form action="/passwordgenerator" method="post">
+                <button class="gen" type="Submit">Password <span style="color:blue">Generator</span></button>
+            </form>
+        </div>
+        <div>
+            <form action="/storageVault" method="post">
+                <button class="storage" type="Submit">Password <span style="color:blue">Vault</span></button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
