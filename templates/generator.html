@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sora" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<style>
+    body{
+        background-image:url("/static/main-back.jpg");
+        color:white;
+        font-family: "Sora";
+    }
+    #infobox{
+        margin-top: 4rem;
+    }
+    #popsmoke{
+        font-size: 60px;
+        padding-left: 4rem;
+    }
+    #buttons{
+        padding-left: 4rem;
+    }
+    input[type="text"]
+    {
+        font-size: 40px;
+        font-family: "Sora";
+        padding: 20px;
+        width: 70%;
+        border:3px solid;
+        border-radius: 10px;
+        background-color: #D9D9D9;
+    }
+    input[type="submit"]
+    {
+        transition: 0.4s;
+        width:230px;
+        height:100px;
+        border-radius: 10px;
+        padding: 20px;
+        font-size: 45px;
+        color:white;
+        font-family: "Sora";
+        background-color: rgb(22, 22, 204);
+    }
+    input[type="submit"]:hover{
+        box-shadow: 0 0 20px 0 grey;
+        width:245px;
+        height:115px;
+        font-size: 50px;
+    }
+    #geninfo
+    {
+        margin-top: 50px;
+        margin-left: 4rem;
+        background-color: #1f2833;
+        font-size: 35px;
+        width:90%;
+        padding-left: 35px;padding-right: 35px;
+        padding-top: 15px;padding-bottom:15px;
+        border-radius: 10px;
+    }
+    @media all and (max-width:600px)
+    {
+    #popsmoke{
+        font-size: 30px;
+        padding-left: 20px;
+    }
+    #buttons{
+        padding-left: 20px;
+    }
+    input[type="text"]
+    {
+        font-size: 20px;
+        padding: 10px;
+        width: 80%;
+        border-radius: 5px;
+        border:1px solid;
+    }
+    input[type="submit"]:hover{
+        box-shadow: 0 0 20px 0 grey;
+        width:125px;
+        height:65px;
+        font-size: 22px;
+    }
+    input[type="submit"]
+    {
+        margin-top: 0;
+        transition: 0.3s;
+        width:120px;
+        height:60px;
+        padding: 15px;
+        font-size: 20px;
+
+    }
+    #geninfo
+    {
+        margin-top: 20px;
+        margin-left: 20px;
+        font-size: 15px;
+        width:80%;
+        padding-left: 15px;padding-right: 15px;
+        text-align: justify;
+    }
+    }
+</style>
+
+<body>
+    <form action="/generatedPassword" method="post">
+        <div id="infobox">
+            <div id="entlabel">
+                <label id="popsmoke">Enter length for your password:</label><br><br>
+            </div>
+            <div id="buttons">
+                <input type="text" name="lengthofpass" required><br><br><br>
+                <input id="submit" type="submit" name="submit">
+            </div>
+        </div>
+    </form>
+    <div id="geninfo">
+        <p>Depending on the length you specify, our password generator can create a strong and secure password. It works
+            by creating a string of randomly selected characters, including capital and lowercase letters, numbers, and
+            special symbols. By creating complicated passwords that are challenging for hackers to decipher or guess, our
+            password generator is used to improve online security.In general, it is advised to select a length
+            greater than <strong>7</strong>.</p>
+    </div>
+</body>
+
+</html>

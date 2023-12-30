@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Extract Passwords</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sora" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<style>
+    body{
+        background-image: url("/static/main-back.jpg");
+        font-family: "Sora";
+        color:white
+    }
+    #infobox{
+        margin-top: 4rem;margin-left: 4rem;
+    }
+    label{
+        font-family: "Sora";
+        font-size: 60px;
+        margin: 0;
+    }
+    input[type="text"]
+    {
+        font-size: 40px;
+        font-family: "Sora";
+        padding: 20px;
+        width: 70%;
+        border:3px solid;
+        border-radius: 10px;
+        background-color: #D9D9D9;
+        margin-top: 10px;
+    }
+    button{
+        margin-top: 20px;
+        transition: 0.4s;
+        width:fit-content;
+        height:100px;
+        border-radius: 10px;
+        padding: 20px;
+        font-size: 45px;
+        color:white;
+        font-family: "Sora";
+        background-color: rgb(22, 22, 204);
+    }
+    button:hover{
+        box-shadow: 0 0 20px 0 grey;
+        width:fit-content;
+        height:110px;
+        font-size: 50px;
+    }
+    @media all and (max-width:600px)
+    {
+        button:hover{
+        box-shadow: 0 0 20px 0 grey;
+        width:fit-content;
+        height:65px;
+        font-size: 22px;
+    }
+    button
+    {
+        margin-top: 30px;
+        transition: 0.3s;
+        width:fit-content;
+        height:60px;
+        padding: 15px;
+        font-size: 20px;
+    }
+    #infobox{
+        margin-top: 30px;margin-left: 20px;
+    }
+    label{
+        font-family: "Sora";
+        font-size: 30px;
+    }
+    input[type="text"]
+    {
+        font-size: 25px;
+        font-family: "Sora";
+        padding: 10px;
+        width: 80%;
+        border:3px solid;
+        border-radius: 10px;
+        background-color: #D9D9D9;
+        margin-top: 10px;
+    }
+    }
+</style>
+
+<body>
+    <div id="infobox">
+        <form action="/extracted" method="post">
+            <div id="entrylabel">
+            <label>Enter keyword identifier:</label>
+            </div>
+            <input type="text" name="key" required><br>
+            <button type="Submit">Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>

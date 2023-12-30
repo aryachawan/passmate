@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Password Score</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sora" />
+</head>
+<style>
+    body {
+        background-image: url("/static/main-back.jpg");
+        color: white;
+        font-family: "Sora";
+    }
+
+    #content {
+        width: 60%;
+        border: 3px solid white;
+        text-align: center;
+        border-radius: 10px;
+        padding-top: 5px;padding-bottom: 5px;
+        padding-left: 30px;padding-right: 30px;
+        margin-top: 10rem;
+        box-shadow: 0 6px 20px 0 grey;
+    }
+
+    #entpass,
+    .score {
+        font-size: 4rem;
+    }
+
+    .flag {
+        font-size: 4.5rem;
+        font-weight: 750;
+        color: white;
+    }
+    @media all and (max-width: 600px)
+    {
+        #content {
+        width: 60%;
+        border: 3px solid white;
+        text-align: center;
+        border-radius: 10px;
+        padding-top: 5px;padding-bottom: 5px;
+        padding-left: 30px;padding-right: 30px;
+        box-shadow: 0 6px 20px 0 grey;
+    }
+
+    #entpass,
+    .score {
+        font-size: 25px;
+        color:white;
+    }
+
+    .flag {
+        font-size: 30px;
+        font-weight: 750;
+        color:white;
+    }
+    }
+</style>
+
+<body>
+    
+    <center>
+        <div id="content">
+            <p class="score">Result:</p>
+            <p id="entpass">entered password: <span class="flag"><em>{{jod}}</em></span></p>
+            <p class="score">password score: <span class="flag">{{god}}%</span></p>
+        </div>
+    </center>
+</body>
+
+</html>

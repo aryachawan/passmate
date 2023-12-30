@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Passowrd Saved</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sora" />
+</head>
+<style>
+    body{
+        background-image: url("/static/main-back.jpg");
+        font-family: "Sora";
+        color:white;
+    }
+    #savinfo{
+        width: 70%;
+        border: 3px solid white;
+        text-align: center;
+        border-radius: 10px;
+        padding-top: 5px;padding-bottom: 5px;
+        padding-left: 30px;padding-right: 30px;
+        margin-top: 10rem;
+        box-shadow: 0 6px 20px 0 grey;
+        padding-bottom: 30px;
+        padding-top: 30px;
+    }
+    #saved{
+        font-size: 60px;
+        margin: 0;
+    }
+    button{
+        margin-top: 20px;
+        transition: 0.3s;
+        width:fit-content;
+        height:100px;
+        border-radius: 10px;
+        padding: 15px;
+        font-size: 40px;
+        color:white;
+        font-family: "Sora";
+        background-color: rgb(22, 22, 204);
+    }
+    button:hover{
+        box-shadow: 0 0 20px 0 grey;
+        width:fit-content;
+        height:105px;
+        font-size: 42px;
+    }
+    input
+    {
+        font-size: 40px;
+        font-family: "Sora";
+        padding: 20px;
+        width: 70%;
+        border:3px solid;
+        border-radius: 10px;
+        background-color: #D9D9D9;
+    }
+    @media all and (max-width:600px)
+    {
+        #savinfo{
+        width: 70%;
+        padding-bottom: 30px;
+        padding-top: 30px;
+    }
+    #saved{
+        font-size: 30px;
+        padding-bottom: 10px;
+    }
+    button{
+        padding: 15px;
+        height:70px;
+        font-size: 25px;
+        color:white;
+    }
+    button:hover{
+        box-shadow: 0 0 20px 0 grey;
+        width:fit-content;
+        height:70px;
+        font-size: 25px;
+    }
+    input
+    {
+        font-size: 30px;
+        font-family: "Sora";
+        padding: 15px;
+        width: 80%;
+    }
+    }
+</style>
+<body>
+    <center>
+    <div id="savinfo">
+        <p id="saved"><strong>password saved successfully</strong></p>
+        <input id="key" value="{{passdata['id']}}">
+        <button onclick="myFunction()">copy</button>
+    </div>
+    </center>
+    <script>
+        function myFunction() {
+            var copyText = document.getElementById("key");
+
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+
+            navigator.clipboard.writeText(copyText.value);
+
+            alert("Copied the text: " + copyText.value);
+        }
+    </script>
+</body>
+
+</html>

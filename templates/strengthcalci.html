@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Strength Calculator</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sora" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<style>
+    body{
+        background-image: url("/static/main-back.jpg");
+        color:white;
+        font-family: "Sora";
+        margin: 0;
+        padding: 0;
+    }
+    #entrylabel{
+        font-size: 60px;
+        margin: 0;
+        padding-left: 4rem;
+    }
+    #epass,#sub{
+        padding-left: 4rem;
+    }
+    input[type="text"]
+    {
+        font-size: 40px;
+        font-family: "Sora";
+        padding: 20px;
+        width: 70%;
+        border:3px solid;
+        border-radius: 10px;
+        background-color: #D9D9D9;
+    }
+    input[type="submit"]:hover{
+        box-shadow: 0 0 20px 0 grey;
+        width:245px;
+        height:115px;
+        font-size: 50px;
+    }
+    input[type="submit"]
+    {
+        transition: 0.3s;
+        width:230px;
+        height:100px;
+        border-radius: 10px;
+        padding: 20px;
+        font-size: 45px;
+        color:white;
+        font-family: "Sora";
+        background-color: rgb(22, 22, 204);
+    }
+    #sclinfo
+    {
+        margin-top: 50px;
+        margin-left: 4rem;
+        background-color: #1f2833;
+        font-size: 35px;
+        width:90%;
+        padding-left: 35px;padding-right: 35px;
+        padding-top: 15px;padding-bottom:15px;
+        border-radius: 10px;
+    }
+    @media all and (max-width: 600px)
+    {
+    #entrylabel{
+        color:white;
+        font-size: 30px;
+        margin: 0;
+        padding-left: 20px;
+    }
+    #epass,#sub{
+        padding-left: 20px;
+    }
+    #epass{
+        margin-bottom: 0;
+    }
+    input[type="text"]
+    {
+        font-size: 20px;
+        padding: 10px;
+        width: 80%;
+        border-radius: 5px;
+        border:1px solid;
+    }
+    input[type="submit"]:hover{
+        box-shadow: 0 0 20px 0 grey;
+        width:125px;
+        height:65px;
+        font-size: 22px;
+    }
+    input[type="submit"]
+    {
+        margin-top: 0;
+        transition: 0.3s;
+        width:120px;
+        height:60px;
+        padding: 15px;
+        font-size: 20px;
+
+    }
+    #sclinfo
+    {
+        margin-top: 20px;
+        margin-left: 20px;
+        font-size: 15px;
+        width:80%;
+        padding-left: 15px;padding-right: 15px;
+        text-align: justify;
+    }
+    }
+</style>
+
+<body>
+    <div>
+        <form action="/passwordscore" method="post">
+            <div id="newbox">
+                <br><br><br>
+                <label id="entrylabel">enter any password :
+                </label>
+                <br><br>
+                <div id="epass">
+                    <input type="text" name="password" required>
+                </div>
+                <br>
+                <div id="sub">
+                    <input id="submit" type="submit" name="submit">
+                </div>
+            </div>
+        </form>
+    </div>
+    <div id="sclinfo">
+        <p>The Strength Calculator computes the strength of your password and gives a percentage-based rating.
+            The calculation takes by place taking into account a number of factors such as
+            length, complexity, and character variety. The calculator evaluates these components and gives a
+            rating or score that quantifies the strength of the password. This enables users to create or modify
+            passwords with more knowledge, making them less vulnerable to hacker efforts.</p>
+    </div>
+</body>
+
+</html>
