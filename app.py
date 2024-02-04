@@ -1,5 +1,5 @@
 from flask import Flask,render_template,request
-from newfunction import checkpasswordstrength,generatepassword,add_pass_to_db,load_pass_from_db,load_spass_from_db
+from function import checkpasswordstrength,generatepassword,add_pass_to_db,load_pass_from_db,load_spass_from_db
 app=Flask(__name__)
 
 @app.route("/")
