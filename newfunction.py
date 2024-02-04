@@ -43,7 +43,7 @@ def generatepassword(len):
     return password
 
 # DATABASE CONNECTION
-mydb = mysql.connector.connect(host="localhost",user="root",passwd="",database="passmate")
+mydb = mysql.connector.connect(host="localhost",user="root",passwd="",database="passmate",port=3306)
 mycursor=mydb.cursor()
 
 # FUNCTION FOR ADDING PASSWORDS TO DB
